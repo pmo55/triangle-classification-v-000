@@ -14,4 +14,5 @@ def kind
   return :scalene
 end
 end
+class TriangleError <
 end
