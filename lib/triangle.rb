@@ -6,19 +6,21 @@ class Triangle
     @side_3=side_3
 end
 def valid?
-  if side_1 <= 0 || side <= 0 || side_3 <= 0
+  if side_1 <= 0 || side <= 0 || side_3 <= 0 || side_1+ side_2 < side_3 || side_1 + side_3 < side_2 || side_2+side_3< side_1
     return false
+  else return true
+    
 end
 def kind
+  if valid?
   if side_1==side_2 && side_2 == side_3
     return :equilateral
   elsif side_1==side_2 || side_2==side_3 || side_1==side_3
   return :isosceles
   elsif side_1 != side_2 && side_2 != side_3 && side_1 != side_3
   return :scalene
-elsif side_1 <= 0 || side_2 <=0 || side_3 <=0  
-        raise TriangleError
-      end
+else raise TriangleError
+end
 end
 class TriangleError < StandardError
   def message
