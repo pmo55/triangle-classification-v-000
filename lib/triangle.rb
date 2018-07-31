@@ -11,6 +11,7 @@ def valid?
   else return true
     
 end
+end
 def kind
   if valid?
   if side_1==side_2 && side_2 == side_3
