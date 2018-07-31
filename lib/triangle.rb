@@ -21,7 +21,6 @@ def kind
   return :scalene
 else raise TriangleError
 end
-end
 class TriangleError < StandardError
   def message
     "Triangle is invalid"
