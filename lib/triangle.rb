@@ -6,7 +6,8 @@ class Triangle
     @side_3=side_3
 end
 def valid?
-  
+  if side_1 <= 0 || side <= 0 || side_3 <= 0
+    return false
 end
 def kind
   if side_1==side_2 && side_2 == side_3
