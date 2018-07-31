@@ -23,6 +23,7 @@ end
 else
   raise TriangleError
 end
+end
 class TriangleError < StandardError
   def message
     "Triangle is invalid"
