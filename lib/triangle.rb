@@ -12,3 +12,4 @@ def kind
   return :isosceles
 end
 end
+end
